@@ -26,7 +26,7 @@
     letter-spacing: 0.5px;
 }
 
-#circle{
+#circle,#circle-mobile{
     background-color: hsl(150, 100%, 66%);
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -45,7 +45,7 @@
     -o-transition: 0.1s ease;
 }
 
-#circle::after{
+#circle::after, #circle-mobile::after{
     content: url(../images/icon-dice.svg);
     position: absolute;
     bottom:2px;
@@ -62,10 +62,11 @@
     cursor: pointer;
 }
 
-#circle:active{
+#circle:active, #circle-mobile:active{
     transform: scale(0.7);
     -webkit-transform: scale(0.7);
     -moz-transform: scale(0.7);
     -ms-transform: scale(0.7);
     -o-transform: scale(0.7);
+    box-shadow: 0px 0px 25px  hsl(150, 100%, 66%);
 }

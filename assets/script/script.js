@@ -1,4 +1,4 @@
-const circle = document.getElementById("circle")
+var circle = document.getElementById("circle")
 const title = document.getElementById("title")
 const advice = document.getElementById("advice")
 
@@ -12,5 +12,13 @@ function getAdvice(){
     })
 }
 
+
+
 circle.addEventListener("click",getAdvice)
 window.addEventListener('load', getAdvice);
+window.addEventListener('load', function() {
+    if('ontouchstart' in window || navigator.maxTouchPoints) {
+        document.body.addEventListener('touchstart', function() {}, false);
+        circle.setAttribute('id','circle-mobile')
+    }
+})
